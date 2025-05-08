@@ -1,0 +1,33 @@
+.feature-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: white;
+}
+
+.feature-card {
+    background-color: white;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+.feature-description {
+    font-size: 14px;
+    margin: 0;
+}

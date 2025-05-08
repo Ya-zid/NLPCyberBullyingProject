@@ -1,0 +1,291 @@
+/* accountpage.css */
+.account-page {
+    padding: 20px;
+}/* accountpage.css */
+.account-header {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center horizontally */
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    text-align: center; /* Center text alignment */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.username, .name {
+    margin: 0;
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    margin-left: 20px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.username, .name {
+    margin: 0;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    height: 180px;
+}
+
+.post {
+    position: relative; /* Ensure the hover text is positioned relative to the post */
+    padding: 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden; /* Hide anything that overflows the post box */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.post:hover {
+    background-color: #dcdcdc; /* Lighter gray background on hover */
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset for perfect centering */
+    color: white; /* White font */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    pointer-events: none; /* Prevent hover-text from blocking clicks */
+}
+
+.post:hover .hover-text {
+    opacity: 1; /* Show the text on hover */
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    font-family: 'Baloo 2', sans-serif; 
+    font-weight: bold;
+    cursor: pointer;
+    color: #007bff;
+}
+.select-all-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+    font-size: 14px;
+    color: #555;
+}
+.comments-container {
+    max-height: 300px;
+    overflow-y: auto; /* Adds scroll for long lists */
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.comment-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 14px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #000000;
+    margin-right: 5px;
+}
+
+.comment-message {
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.delete-button,
+.return-button,
+.report-button {
+    padding: 10px 20px;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.detect-button
+{
+    margin: 20px auto 0;
+    padding: 10px 60px;
+    background: linear-gradient(to right, #7b2ff7, #00d2ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block; /* Center-align the button */
+    max-width: fit-content;
+    width: 50%;
+    font-family: 'Baloo 2', sans-serif; 
+}
+
+.detect-button:hover {
+    background: linear-gradient(to right, #00d2ff, #7b2ff7);
+}
+.report-button {
+    background-color: #ebeced;
+    color: #3399ff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal; 
+    padding: 8px 15px; 
+    font-size: 12px; 
+    border-radius: 8px; 
+    cursor: pointer;
+}
+
+.report-button:hover {
+    background-color: #d3d3d4;
+}
+
+.delete-button {
+    background-color: #3399ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal; 
+    padding: 8px 15px; 
+    font-size: 12px; 
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #2991fa;
+}
+.return-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #3399ff; /* Blue font color */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px; /* Keep font size normal */
+    font-family: 'Baloo 2', sans-serif; /* Use Baloo 2 font */
+    font-weight: normal; /* Remove bold styling */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+    color: #007bff; /* Slightly darker blue font on hover */
+}
+
+.success-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Baloo 2', sans-serif;
+    position: relative;
+}
+
+.success-modal-content h1 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+

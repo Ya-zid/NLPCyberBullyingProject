@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a21ff3;
+}
+
+.logo .highlight {
+    color: #2196f3;
+}
+
+.nav-container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between; /* Space between nav links and contact button */
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Center the links */
+    gap: 20px; /* Space between links */
+    flex: 1; /* Allow nav-links to take available space */
+}
+
+
+
+.contact-button {
+    background-color: #aa2ff6;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Baloo 2', sans-serif; 
+}
+
+.contact-button:hover {
+    background-color: #9c27b0;
+}
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #bd78e8; /* Hover effect */
+}
+
+.nav-links a.active-link {
+    color: #a21ff3; /* Purple for active links */
+    font-weight: bold; /* Optional: Add bold style for emphasis */
+    border-bottom: 2px solid #a21ff3; /* Optional: Add underline effect */
+}
